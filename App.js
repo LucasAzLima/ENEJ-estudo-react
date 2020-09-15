@@ -8,6 +8,7 @@ import { createStackNavigator } from "react-navigation-stack";
 
 import login from "./Components/Screens/login";
 import signup from "./Components/Screens/signup";
+import teste from "./Components/Screens/teste";
 
 
 const AppNavigator = createStackNavigator(
@@ -19,10 +20,17 @@ const AppNavigator = createStackNavigator(
         header:null,
       }
     },
+    TesteScreen: {
+      screen: teste,
+      navigationOptions: {
+        title: "TESTE",
+        header:null,
+      }
+    },
     BodyScreen: {
       screen: Body,
       navigationOptions: {
-        title: "Palestra1",
+        title: "React JS",
         headerTintColor:"#fff",
         headerStyle:{
           backgroundColor:"#05d1a1",

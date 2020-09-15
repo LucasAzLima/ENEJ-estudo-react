@@ -7,13 +7,14 @@ class App extends React.Component {
     senha: '',
 
   };
+  
 
   render() {
     return (
       <View style={styles.container}>
         <ImageBackground source={require("../pic/enej.png")} style={{ width: "100%", height: 250 }} />
           
-        <View style={{marginHorizontal:15, marginTop:5}}>
+        <View style={{marginHorizontal:15, marginTop:20}}>
 
           <View style={styles.ViewTI}>
             <MaterialCommunityIcons name="email-outline" color="#05d1a1" size={40} style={{ marginLeft: 8 }} />
@@ -33,24 +34,18 @@ class App extends React.Component {
 
         </View>
         <View style={{marginHorizontal:15}}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('HomeScreen')}>
             <View style={styles.ViewButton}>
               <Text style={{color:"#ffffff", fontWeight:"bold"}}>ENTRAR</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => this.props.navigation.navigate('SignupScreen')}>
+{/*           <TouchableOpacity onPress={() => this.props.navigation.navigate('SignupScreen')}>
             <View style={styles.ViewButton}>
               <Text style={{color:"#ffffff", fontWeight:"bold"}}>REGISTRAR</Text>
             </View>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
+          <Text style={{marginLeft:250}} onPress={() => this.props.navigation.navigate('SignupScreen')}>Cadastrar-se</Text>
         </View>
-        <View style={styles.View}>
-            <TouchableOpacity 
-            onPress={() => this.props.navigation.navigate('HomeScreen')}>
-              <Text>Pular</Text>
-              <MaterialIcons name="navigate-next" size={32} />
-            </TouchableOpacity>
-          </View>
       </View>
     );
   }

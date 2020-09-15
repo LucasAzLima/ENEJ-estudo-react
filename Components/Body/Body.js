@@ -17,7 +17,7 @@ class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     paddingTop: (Platform.OS === 'ios') ? 20 : 0,
     marginTop:20
   },
